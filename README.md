@@ -22,9 +22,11 @@ Champscent/
 ├── README.md
 └── .gitignore
 
+---
+
 ## 🧑‍💻 Instalación y uso local
 ### 1. Clonar el repositorio
-###2. Backend (champscent-api)
+### 2. Backend (champscent-api)
 cd champscent-api
 npm install
 node index.js
@@ -36,6 +38,8 @@ cd ../champscent
 npm install
 ng serve
 Abre http://localhost:4200 en el navegador.
+
+---
 
 ### Funcionalidades principales
 ### Cliente
