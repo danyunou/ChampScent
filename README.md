@@ -62,6 +62,7 @@ Abre http://localhost:4200 en el navegador.
 - Gestión de productos (crear, editar, eliminar)
 - Inventario en tiempo real
 - Acceso solo para rol admin
-
+  
+---
 
 Este proyecto es de uso educativo y personal. Para uso comercial, se recomienda agregar una licencia adecuada.
