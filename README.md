@@ -24,7 +24,15 @@ Champscent/
 
 ---
 
-## 🧑‍💻 Instalación y uso local
+### Instalación y uso local  
+Este proyecto está dividido en dos carpetas principales:  
+- `champscent`: Frontend hecho con Angular
+- `champscent-api`: Backend hecho con Node.js, Express y MongoDB
+### Requisitos Previos
+- Node.js 18+ y npm  
+- MongoDB  
+- Angular CLI (`npm install -g @angular/cli`)
+### Pasos para instalarlo
 ### 1. Clonar el repositorio
 ### 2. Backend (champscent-api)
 cd champscent-api  
