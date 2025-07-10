@@ -1,0 +1,27 @@
+<div class="catalogo-header">
+  <button *ngIf="rol === 'cliente'" (click)="irAlCarrito()">🛒 Ver Carrito</button>
+  <button *ngIf="rol === 'admin'" (click)="irAInventario()">📦 Inventario</button>
+  <button (click)="cerrarSesion()">Cerrar sesión</button>
+</div>
+
+<h2 class="titulo">Bienvenido a Champscent</h2>
+<h2 class="titulo">Catálogo de Perfumes</h2>
+
+<div class="catalogo-container">
+  <div class="producto-card" *ngFor="let p of productos">
+    <img class="producto-img" [src]="'http://localhost:3000/images/' + p.imagen" alt="{{ p.nombre }}" />
+
+    <h3>{{ p.nombre }}</h3>
+    <p><strong>${{ p.precio }}</strong></p>
+    <p>Stock: <span [style.color]="p.stock > 0 ? 'green' : 'red'">{{ p.stock }}</span></p>
+
+    <div class="boton-contenedor" *ngIf="rol === 'cliente'">
+      <button (click)="agregarAlCarrito(p)">Agregar al carrito</button>
+      <button (click)="verMas(p._id)">Ver más</button>
+    </div>
+
+    <div class="boton-contenedor" *ngIf="rol === 'admin'">
+      <button (click)="verMas(p._id)">Ver más</button>
+    </div>
+  </div>
+</div>

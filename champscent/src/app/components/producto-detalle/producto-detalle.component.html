@@ -1,0 +1,11 @@
+<div *ngIf="producto" class="detalle-container">
+  <h2>{{ producto.nombre }}</h2>
+  <img [src]="'http://localhost:3000/images/' + producto.imagen" alt="{{ producto.nombre }}" class="detalle-img" />
+  <p>{{ producto.descripcion }}</p>
+  <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+  <p><strong>Stock:</strong> {{ producto.stock }}</p>
+
+  <button (click)="agregarAlCarrito()">Agregar al carrito</button>
+  <button (click)="volver()">Volver al catálogo</button>
+</div>
+

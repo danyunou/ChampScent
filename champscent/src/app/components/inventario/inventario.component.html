@@ -1,0 +1,39 @@
+<div class="inventario-header">
+  <button (click)="irACatalogo()">← Ver Catálogo</button>
+  <button (click)="cerrarSesion()">Cerrar sesión</button>
+</div>
+
+<h2 class="titulo">Panel de Inventario</h2>
+
+<table class="tabla-inventario">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <td><input [(ngModel)]="p.nombre" (blur)="editar(p._id, 'nombre', p.nombre)" /></td>
+      <td><input [(ngModel)]="p.descripcion" (blur)="editar(p._id, 'descripcion', p.descripcion)" /></td>
+      <td><input type="number" [(ngModel)]="p.precio" (blur)="editar(p._id, 'precio', p.precio)" /></td>
+      <td><input type="number" [(ngModel)]="p.stock" (blur)="editar(p._id, 'stock', p.stock)" /></td>
+      <td><input [(ngModel)]="p.imagen" (blur)="editar(p._id, 'imagen', p.imagen)" /></td>
+      <td><button (click)="eliminar(p._id)">❌</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Agregar nuevo producto</h3>
+<form (ngSubmit)="agregarProducto()">
+  <input [(ngModel)]="nuevo.nombre" name="nombre" placeholder="Nombre" required />
+  <input [(ngModel)]="nuevo.descripcion" name="descripcion" placeholder="Descripción" required />
+  <input type="number" [(ngModel)]="nuevo.precio" name="precio" placeholder="Precio" required />
+  <input type="number" [(ngModel)]="nuevo.stock" name="stock" placeholder="Stock" required />
+  <input [(ngModel)]="nuevo.imagen" name="imagen" placeholder="URL Imagen" required />
+  <button type="submit">Agregar</button>
+</form>

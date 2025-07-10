@@ -1,0 +1,21 @@
+<h2 class="titulo">Recuperar Contraseña</h2>
+<div class="form-container">
+  <form (ngSubmit)="recuperar()">
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Correo electrónico" required />
+    
+    <select [(ngModel)]="pregunta" name="pregunta" required>
+      <option value="¿Cuántos años tienes?">¿Cuántos años tienes?</option>
+      <option value="¿Tienes mascotas?">¿Tienes mascotas?</option>
+    </select>
+    
+    <input type="text" [(ngModel)]="respuesta" name="respuesta" placeholder="Respuesta" required />
+    
+    <input type="password" [(ngModel)]="nuevaPassword" name="nuevaPassword" placeholder="Nueva contraseña" required />
+    
+    <button type="submit">Actualizar contraseña</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 15px;">
+    <a routerLink="/login">← Volver al inicio de sesión</a>
+  </p>
+</div>

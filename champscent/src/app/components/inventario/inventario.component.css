@@ -1,0 +1,79 @@
+.inventario-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 1rem 2rem;
+}
+
+.inventario-header button {
+  background-color: #006d8f;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inventario-header button:hover {
+  background-color: #0189b3;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+input {
+  padding: 6px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #006d8f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0189b3;
+}
+
+.agregar-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.agregar-form input {
+  flex: 1 1 45%;
+}
+
+.agregar-form button {
+  flex: 1 1 100%;
+  margin-top: 10px;
+}

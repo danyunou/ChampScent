@@ -1,0 +1,14 @@
+# General
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+
+# Angular
+champscent/node_modules/
+champscent/dist/
+
+# Backend
+champscent-api/node_modules/
+champscent-api/facturas/

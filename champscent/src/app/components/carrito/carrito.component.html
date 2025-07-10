@@ -1,0 +1,28 @@
+<div class="carrito-header">
+  <button (click)="volver()">← Volver al catálogo</button>
+  <button (click)="cerrarSesion()">Cerrar sesión</button>
+</div>
+
+<h2 style="text-align: center;">Mi Carrito</h2>
+<p style="text-align: center;"><strong>Total:</strong> {{ total | currency }}</p>
+
+<div class="carrito-container" *ngIf="carrito.length > 0; else vacio">
+  <div *ngFor="let item of carrito" class="carrito-item">
+    <p><strong>{{ item.nombre }}</strong></p>
+    <p>Precio: {{ item.precio | currency }}</p>
+    <p>Cantidad: {{ item.cantidad }}</p>
+    <div class="botones-cantidad">
+      <button (click)="disminuir(item)">-</button>
+      <button (click)="aumentar(item)" [disabled]="item.stock !== undefined && item.cantidad >= item.stock">+</button>
+      <button (click)="eliminar(item)">🗑 Eliminar</button>
+    </div>
+  </div>
+
+  <div class="paypal-container">
+    <div id="paypal-button-container"></div>
+  </div>
+</div>
+
+<ng-template #vacio>
+  <p style="text-align: center;">Tu carrito está vacío.</p>
+</ng-template>
