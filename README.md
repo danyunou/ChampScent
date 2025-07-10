@@ -16,27 +16,27 @@ También incluye un panel administrativo para gestión de inventario.
 ---
 
 ### Estructura del Proyecto
-Champscent/
-├── champscent/ # Frontend Angular
-├── champscent-api/ # Backend Node.js + Express
-├── README.md
-└── .gitignore
+Champscent/  
+├── champscent/ # Frontend Angular  
+├── champscent-api/ # Backend Node.js + Express  
+├── README.md  
+└── .gitignore  
 
 ---
 
 ## 🧑‍💻 Instalación y uso local
 ### 1. Clonar el repositorio
 ### 2. Backend (champscent-api)
-cd champscent-api
-npm install
-node index.js
-### Asegúrate de tener un archivo .env con la siguiente variable:
-JWT_SECRET=tu_clave_secreta
-PAYPAL_CLIENT_ID=sb 
+cd champscent-api  
+npm install  
+node index.js  
+### Asegúrate de tener un archivo .env con la siguiente variable:  
+JWT_SECRET=tu_clave_secreta  
+PAYPAL_CLIENT_ID=sb  
 ### 3. Frontend (champscent)
-cd ../champscent
-npm install
-ng serve
+cd ../champscent  
+npm install  
+ng serve  
 Abre http://localhost:4200 en el navegador.
 
 ---
